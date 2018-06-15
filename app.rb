@@ -7,7 +7,7 @@ class App < Sinatra::Base
     set :session_secret, "secret"
   end
 
-  get '/hey' do 
+  get '/hey' do
     @session = session
   end
 
@@ -17,6 +17,6 @@ class App < Sinatra::Base
 
   post '/' do
     params[:item]
-    
+
   end
 end
