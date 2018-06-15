@@ -17,6 +17,7 @@ class App < Sinatra::Base
 
   post '/' do
     params[:item]
+     session["name"] = params[:item]
 
   end
 end
