@@ -6,7 +6,7 @@ class App < Sinatra::Base
     erb :index
   end
 
-  post '/' do 
+  post '/' do
     params[:item]
-  end 
+  end
 end
