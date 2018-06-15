@@ -7,10 +7,6 @@ class App < Sinatra::Base
     set :session_secret, "secret"
   end
 
-  get '/hey' do
-    @session = session
-  end
-
   get '/' do
     erb :index
   end
@@ -18,6 +14,5 @@ class App < Sinatra::Base
   post '/' do
     params[:item]
      session["name"] = params[:item]
-
   end
 end
