@@ -13,6 +13,9 @@ class App < Sinatra::Base
 
   post '/' do
     params[:item]
-    @session = session
+    configure do
+      enable :sessions
+      set :session_secret, "secret"
+    end
   end
 end
